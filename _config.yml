@@ -1,0 +1,70 @@
+# Jekyll 配置文件
+title: 三毛机场官方导航
+description: 稳定高速，全球覆盖，安全可靠 - 三毛机场官方导航站
+author: 三毛机场
+email: support@sanmaojichan.com
+url: https://sanmaojichan.github.io
+baseurl: ""
+
+# 构建设置
+markdown: kramdown
+
+# 主题设置 - 禁用默认主题，使用自定义布局
+theme: null
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# 分页设置
+paginate: 10
+paginate_path: "/page:num/"
+
+# 输出设置
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Asia/Shanghai
+
+# 排除文件
+exclude:
+  - .gitignore
+  - .DS_Store
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+
+# 包含文件
+include:
+  - .htaccess
+
+# 集合设置
+collections:
+  airports:
+    output: true
+    permalink: /airports/:name/
+
+# 默认值
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "airports"
+    values:
+      layout: "airport"
+
+# SEO 设置
+social:
+  name: 三毛机场
+  links:
+    - https://twitter.com/sanmaojichan
+    - https://github.com/sanmaojichan

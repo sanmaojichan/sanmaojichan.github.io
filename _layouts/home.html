@@ -1,0 +1,288 @@
+---
+layout: default
+---
+
+<!-- 面包屑导航 -->
+<div class="breadcrumb" style="padding: 16px 0; background: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+    <div class="container" style="font-size: 14px; color: #6b7280;">
+        <a href="/" style="color: #1e40af; text-decoration: none;">首页</a>
+    </div>
+</div>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ page.title }}</h1>
+        <p class="hero-subtitle">{{ page.subtitle }}</p>
+        <div class="hero-buttons">
+            <a href="/categories" class="btn btn-primary">浏览所有机场</a>
+            <a href="#features" class="btn btn-secondary">了解更多</a>
+        </div>
+    </div>
+</section>
+
+<section class="stats" id="features">
+    <div class="container">
+        <div class="stats-grid">
+            {% for stat in page.stats %}
+            <div class="stat-item">
+                <div class="stat-value">{{ stat.value }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>为什么选择三毛机场？</h2>
+        <div class="features-grid">
+            {% for feature in page.features %}
+            <div class="feature-card">
+                <div class="feature-icon">{{ feature.icon }}</div>
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="specs">
+    <div class="container">
+        <h2>支持的协议与服务</h2>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <h4>🔐 支持协议</h4>
+                <ul>
+                    {% for protocol in page.specs.protocols %}
+                    <li>{{ protocol }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="spec-item">
+                <h4>🎬 解锁服务</h4>
+                <ul>
+                    {% for service in page.specs.unlockServices %}
+                    <li>{{ service }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="spec-item">
+                <h4>🌐 IP 类型</h4>
+                <p><strong>{{ page.specs.ipType }}</strong></p>
+                <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">住宅 IP 隐蔽性强，数据中心 IP 速度快</p>
+            </div>
+            <div class="spec-item">
+                <h4>🗺️ 节点分布</h4>
+                <p><strong>{{ page.specs.nodeDistribution }}</strong></p>
+                <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">全球 280+ 节点，智能路由选择</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="performance" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 80px 20px;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 48px;">性能指标</h2>
+        <div class="specs-grid">
+            {% for perf in page.specs.performance %}
+            <div class="spec-item">
+                <h4>{{ perf.metric }}</h4>
+                <p style="font-size: 28px; font-weight: 700; color: #1e40af; margin: 12px 0;">{{ perf.value }}</p>
+                <p style="font-size: 13px; color: #6b7280;">{{ perf.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="ip-distribution" style="padding: 80px 20px; background: #ffffff;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 48px;">全球节点分布</h2>
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead style="background: #f3f4f6;">
+                    <tr>
+                        <th style="padding: 16px; text-align: left; font-weight: 700; border-bottom: 2px solid #e5e7eb;">地区</th>
+                        <th style="padding: 16px; text-align: left; font-weight: 700; border-bottom: 2px solid #e5e7eb;">节点数</th>
+                        <th style="padding: 16px; text-align: left; font-weight: 700; border-bottom: 2px solid #e5e7eb;">特点</th>
+                        <th style="padding: 16px; text-align: left; font-weight: 700; border-bottom: 2px solid #e5e7eb;">平均速度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 16px;">🇺🇸 美国</td>
+                        <td style="padding: 16px;">85+</td>
+                        <td style="padding: 16px;">节点最多，速度最快</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">920 Mbps</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 16px;">🇯🇵 日本</td>
+                        <td style="padding: 16px;">45+</td>
+                        <td style="padding: 16px;">亚洲最优选择</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">850 Mbps</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 16px;">🇸🇬 新加坡</td>
+                        <td style="padding: 16px;">35+</td>
+                        <td style="padding: 16px;">东南亚枢纽</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">880 Mbps</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 16px;">🇭🇰 香港</td>
+                        <td style="padding: 16px;">40+</td>
+                        <td style="padding: 16px;">中国用户首选</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">890 Mbps</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 16px;">🇪🇺 欧洲</td>
+                        <td style="padding: 16px;">50+</td>
+                        <td style="padding: 16px;">欧洲覆盖最全</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">800 Mbps</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 16px;">🌍 其他地区</td>
+                        <td style="padding: 16px;">25+</td>
+                        <td style="padding: 16px;">南美、大洋洲等</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">750 Mbps</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="pricing">
+    <div class="container">
+        <h2>三毛机场价格方案</h2>
+        <div class="pricing-grid">
+            {% for plan in page.pricing %}
+            <div class="pricing-card {% if plan.recommended %}recommended{% endif %}">
+                {% if plan.recommended %}<div class="badge">推荐</div>{% endif %}
+                <h3>{{ plan.name }}</h3>
+                <div class="price">
+                    <span class="amount">¥{{ plan.price }}</span>
+                    <span class="period">/{{ plan.period }}</span>
+                </div>
+                <div class="features">
+                    <p><strong>流量：</strong>{{ plan.traffic }}</p>
+                    <p><strong>设备数：</strong>{{ plan.devices }}</p>
+                    <ul>
+                        {% for feature in plan.features %}
+                        <li>✓ {{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">立即购买</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="comparison">
+    <div class="container">
+        <h2>与其他机场对比</h2>
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>机场</th>
+                        <th>平均速度</th>
+                        <th>节点数</th>
+                        <th>延迟</th>
+                        <th>价格</th>
+                        <th>推荐度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for airport in page.comparison %}
+                    <tr>
+                        <td><strong>{{ airport.airport }}</strong></td>
+                        <td>{{ airport.speed }}</td>
+                        <td>{{ airport.nodes }}</td>
+                        <td>{{ airport.latency }}</td>
+                        <td>{{ airport.price }}</td>
+                        <td>{{ airport.rating }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- 最新新闻展示 -->
+<section class="latest-news" style="padding: 80px 20px; background: #ffffff;">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px;">
+            <h2 style="margin: 0;">最新资讯</h2>
+            <a href="/news" style="color: #1e40af; text-decoration: none; font-size: 14px;">查看全部 →</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+            {% assign posts = site.posts | sort: 'date' | reverse %}
+            {% for post in posts limit: 3 %}
+            <div class="news-card" style="padding: 24px; border: 1px solid #e5e7eb; border-radius: 8px; transition: all 0.3s ease;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                    {% if post.category %}
+                    <span style="font-size: 12px; color: #f97316; background: #fed7aa; padding: 4px 8px; border-radius: 4px;">{{ post.category }}</span>
+                    {% else %}
+                    <span style="font-size: 12px; color: #f97316; background: #fed7aa; padding: 4px 8px; border-radius: 4px;">文章</span>
+                    {% endif %}
+                    <span style="font-size: 12px; color: #6b7280;">{{ post.date | date: '%Y年%m月%d日' }}</span>
+                </div>
+                <h3 style="margin: 12px 0; font-size: 16px; line-height: 1.5;">
+                    <a href="{{ post.url }}" style="color: #1f2937; text-decoration: none;">
+                        {% if post.title.size > 40 %}
+                            {{ post.title | truncate: 40 }}
+                        {% else %}
+                            {{ post.title }}
+                        {% endif %}
+                    </a>
+                </h3>
+                {% if post.excerpt %}
+                <p style="margin: 12px 0; font-size: 14px; color: #6b7280; line-height: 1.6;">{{ post.excerpt | strip_html | truncate: 80 }}</p>
+                {% elsif post.description %}
+                <p style="margin: 12px 0; font-size: 14px; color: #6b7280; line-height: 1.6;">{{ post.description | strip_html | truncate: 80 }}</p>
+                {% else %}
+                <p style="margin: 12px 0; font-size: 14px; color: #6b7280; line-height: 1.6;">{{ post.content | strip_html | truncate: 80 }}</p>
+                {% endif %}
+                <a href="{{ post.url }}" style="color: #1e40af; text-decoration: none; font-size: 14px; font-weight: 500;">阅读全文 →</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="about" style="padding: 80px 20px; background: #f9fafb;">
+    <div class="container" style="max-width: 800px;">
+        <h2 style="text-align: center; margin-bottom: 32px;">关于三毛机场</h2>
+        
+        <h3 style="margin-top: 32px; margin-bottom: 16px;">我们的使命</h3>
+        <p>三毛机场是性价比最高的代理服务提供商，致力于为全球用户提供安全、快速、稳定的网络访问体验。我们相信每个人都应该有安全、快速、稳定的网络访问权利，而不需要花费巨资。</p>
+        
+        <h3 style="margin-top: 32px; margin-bottom: 16px;">技术架构</h3>
+        <p>三毛机场采用全球分布式服务器架构，在美国、日本、新加坡、香港、欧洲等地部署了 280+ 个高性能节点。我们使用最新的加密技术和智能路由算法，确保您的数据安全和连接速度。</p>
+        
+        <h3 style="margin-top: 32px; margin-bottom: 16px;">我们的承诺</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;"><strong>✓ 无日志政策</strong> - 我们不记录任何用户活动，完全尊重您的隐私</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;"><strong>✓ 无隐藏费用</strong> - 价格透明，没有任何额外收费或续费陷阱</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;"><strong>✓ 无限制速度</strong> - 所有套餐都享受最快的连接速度，无限制</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;"><strong>✓ 无地域限制</strong> - 访问全球任何网站，没有任何地理限制</li>
+            <li style="padding: 12px 0;"><strong>✓ 30 天退款保证</strong> - 不满意可全额退款，无任何问题</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .news-card {
+        cursor: pointer;
+    }
+    .news-card:hover {
+        border-color: #1e40af !important;
+        box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+        transform: translateY(-2px);
+    }
+</style>
