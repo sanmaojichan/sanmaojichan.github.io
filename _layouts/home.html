@@ -54,27 +54,40 @@ layout: default
         <div class="specs-grid">
             <div class="spec-item">
                 <h4>🔐 支持协议</h4>
-                <ul>
+                <ul style="list-style: none; padding: 0;">
                     {% for protocol in page.specs.protocols %}
-                    <li>{{ protocol }}</li>
+                    <li style="margin-bottom: 12px; font-size: 13px;">
+                        <strong>{{ protocol.name }}</strong>
+                        <p style="margin: 4px 0 0 0; color: #6b7280; font-size: 12px;">{{ protocol.desc }}</p>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="spec-item">
                 <h4>🎬 解锁服务</h4>
-                <ul>
+                <ul style="list-style: none; padding: 0;">
                     {% for service in page.specs.unlockServices %}
-                    <li>{{ service }}</li>
+                    <li style="margin-bottom: 8px; font-size: 13px;">
+                        <strong>{{ service.name }}</strong>
+                        <p style="margin: 2px 0 0 0; color: #6b7280; font-size: 12px;">{{ service.region }}</p>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="spec-item">
                 <h4>🌐 IP 类型</h4>
-                <p><strong>{{ page.specs.ipType }}</strong></p>
-                <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">住宅 IP 隐蔽性强，数据中心 IP 速度快</p>
+                <ul style="list-style: none; padding: 0;">
+                    {% for ipType in page.specs.ipTypeDetail %}
+                    <li style="margin-bottom: 12px; font-size: 13px;">
+                        <strong>{{ ipType.type }}</strong>
+                        <p style="margin: 4px 0 0 0; color: #6b7280; font-size: 12px;">{{ ipType.features }}</p>
+                        <p style="margin: 2px 0 0 0; color: #f97316; font-size: 12px;">{{ ipType.speed }} | {{ ipType.use }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="spec-item">
-                <h4>🗺️ 节点分布</h4>
+                <h4>🗳️ 节点分布</h4>
                 <p><strong>{{ page.specs.nodeDistribution }}</strong></p>
                 <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">全球 280+ 节点，智能路由选择</p>
             </div>
@@ -111,42 +124,14 @@ layout: default
                     </tr>
                 </thead>
                 <tbody>
+                    {% for node in page.specs.nodeDetail %}
                     <tr style="border-bottom: 1px solid #e5e7eb;">
-                        <td style="padding: 16px;">🇺🇸 美国</td>
-                        <td style="padding: 16px;">85+</td>
-                        <td style="padding: 16px;">节点最多，速度最快</td>
-                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">920 Mbps</td>
+                        <td style="padding: 16px;">{{ node.region }}</td>
+                        <td style="padding: 16px;">{{ node.nodes }}</td>
+                        <td style="padding: 16px;">{{ node.features }}</td>
+                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">{{ node.speed }}</td>
                     </tr>
-                    <tr style="border-bottom: 1px solid #e5e7eb;">
-                        <td style="padding: 16px;">🇯🇵 日本</td>
-                        <td style="padding: 16px;">45+</td>
-                        <td style="padding: 16px;">亚洲最优选择</td>
-                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">850 Mbps</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e5e7eb;">
-                        <td style="padding: 16px;">🇸🇬 新加坡</td>
-                        <td style="padding: 16px;">35+</td>
-                        <td style="padding: 16px;">东南亚枢纽</td>
-                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">880 Mbps</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e5e7eb;">
-                        <td style="padding: 16px;">🇭🇰 香港</td>
-                        <td style="padding: 16px;">40+</td>
-                        <td style="padding: 16px;">中国用户首选</td>
-                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">890 Mbps</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e5e7eb;">
-                        <td style="padding: 16px;">🇪🇺 欧洲</td>
-                        <td style="padding: 16px;">50+</td>
-                        <td style="padding: 16px;">欧洲覆盖最全</td>
-                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">800 Mbps</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 16px;">🌍 其他地区</td>
-                        <td style="padding: 16px;">25+</td>
-                        <td style="padding: 16px;">南美、大洋洲等</td>
-                        <td style="padding: 16px; color: #1e40af; font-weight: 700;">750 Mbps</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

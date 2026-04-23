@@ -25,13 +25,7 @@ permalink: /news
         <!-- 分类过滤 -->
         <div style="margin-bottom: 48px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
             <span style="font-weight: 600; color: #1f2937;">分类：</span>
-            <a href="/news" style="display: inline-block; background: #1e40af; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s;">全部</a>
-            {% assign categories = site.posts | map: 'category' | compact | uniq | sort %}
-            {% if categories.size > 0 %}
-                {% for category in categories %}
-                <a href="/news?category={{ category }}" style="display: inline-block; background: #f3f4f6; color: #374151; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s; border: 1px solid #e5e7eb;">{{ category }}</a>
-                {% endfor %}
-            {% endif %}
+            <a href="/news" style="display: inline-block; background: #1e40af; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s;">全部文章</a>
         </div>
 
         <!-- 文章列表 -->

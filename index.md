@@ -33,22 +33,89 @@ features:
     description: "专业技术团队随时准备帮助您解决问题。"
 specs:
   protocols:
-    - Shadowsocks
-    - Trojan
-    - VMess
-    - VLESS
-    - Hysteria
+    - name: "Shadowsocks"
+      desc: "简洁高效的代理协议，支持多种加密算法（AES-256-GCM、ChaCha20-Poly1305 等），广泛兼容各类客户端，是最稳定的选择。"
+    - name: "Trojan"
+      desc: "会话稳定性最强的协议，采用 TLS 伪装，抗干扰能力强，特别适合网络环境复杂的地区使用。"
+    - name: "VMess"
+      desc: "高度可定制的模块化协议，支持动态端口、多路复用等高级功能，性能强大且隐蔽性好。"
+    - name: "VLESS"
+      desc: "下一代轻量级协议，会话优化更好，性能比 VMess 提升 30%，低延迟和低 CPU 占用。"
+    - name: "Hysteria"
+      desc: "基于 QUIC 的下一代协议，在不稳定网络环境下表现优异，速度可提升 50% 以上，适合弱网环境。"
   unlockServices:
-    - Netflix
-    - Disney+
-    - HBO Max
-    - Hulu
-    - YouTube Premium
-    - Spotify
-    - ChatGPT
-    - Midjourney
+    - name: "Netflix"
+      region: "全球流媒体平台，支持 4K 超清"
+    - name: "Disney+"
+      region: "迪士尼内容库，全球独家内容"
+    - name: "HBO Max"
+      region: "美国高端内容平台"
+    - name: "Hulu"
+      region: "美国电视直播和点播"
+    - name: "YouTube Premium"
+      region: "无广告观看、后台播放"
+    - name: "Spotify"
+      region: "全球音乐流媒体，无损音质"
+    - name: "ChatGPT"
+      region: "OpenAI 官方 AI 应用"
+    - name: "Midjourney"
+      region: "AI 绘画应用，生成高质量图像"
+    - name: "Amazon Prime Video"
+      region: "亚马逊视频库，全球内容"
+    - name: "Twitch"
+      region: "直播平台，支持观看和互动"
   ipType: "住宅 IP + 数据中心 IP 混合"
+  ipTypeDetail:
+    - type: "住宅 IP（Residential IP）"
+      features: "真实家庭网络 IP，隐蔽性最强，封禁率极低（< 0.01%），完全模拟真实用户"
+      speed: "中等速度（500-700 Mbps）"
+      use: "推荐用于：流媒体解锁、社交媒体、电商平台、内容创作"
+    - type: "数据中心 IP（Datacenter IP）"
+      features: "企业级 IP 池，超高速度，稳定性强，大带宽支持"
+      speed: "超高速度（800-1000+ Mbps）"
+      use: "推荐用于：文件下载、游戏加速、实时应用、视频上传"
   nodeDistribution: "美国、日本、新加坡、香港、欧洲等地"
+  nodeDetail:
+    - region: "🇺🇸 美国东海岸"
+      nodes: "45+"
+      latency: "15-25ms"
+      speed: "950 Mbps"
+      features: "节点最多，连接最稳定"
+    - region: "🇺🇸 美国西海岸"
+      nodes: "30+"
+      latency: "20-35ms"
+      speed: "900 Mbps"
+      features: "适合亚太用户"
+    - region: "🇯🇵 日本东京"
+      nodes: "25+"
+      latency: "30-45ms"
+      speed: "850 Mbps"
+      features: "亚洲最优选择"
+    - region: "🇯🇵 日本大阪"
+      nodes: "20+"
+      latency: "35-50ms"
+      speed: "820 Mbps"
+      features: "备用高速线路"
+    - region: "🇸🇬 新加坡"
+      nodes: "35+"
+      latency: "25-40ms"
+      speed: "880 Mbps"
+      features: "东南亚枢纽"
+    - region: "🇭🇰 香港"
+      nodes: "40+"
+      latency: "10-20ms"
+      speed: "890 Mbps"
+      features: "中国用户首选，延迟最低"
+    - region: "🇪🇺 欧洲中部"
+      nodes: "30+"
+      latency: "40-60ms"
+      speed: "800 Mbps"
+      features: "欧洲覆盖最全"
+    - region: "🇪🇺 欧洲西部"
+      nodes: "20+"
+      latency: "50-70ms"
+      speed: "750 Mbps"
+      features: "英国、法国、德国"
   performance:
     - metric: "平均速度"
       value: "850+ Mbps"

@@ -4,6 +4,11 @@
   emoji: 🛫
   description: 性价比之王，专为预算用户设计的高效代理服务
   website: https://sanmaojichan.com
+  url: https://sanmaojichan.com
+  speed: "850 Mbps"
+  nodes: "280+"
+  latency: "45ms"
+  price: "¥5/月"
   features:
     - 极致性价比
     - 稳定可靠
@@ -64,6 +69,11 @@
   emoji: ⛰️
   description: 稳定性能卓越，适合长期使用的企业级代理
   website: https://taishanairport.com
+  url: https://taishanairport.com
+  speed: "920 Mbps"
+  nodes: "350+"
+  latency: "38ms"
+  price: "¥8/月"
   features:
     - 企业级稳定性
     - 高速节点
@@ -124,6 +134,11 @@
   emoji: 🌸
   description: 节点丰富多样，解锁能力强的综合型代理
   website: https://baibianxiaoying.com
+  url: https://baibianxiaoying.com
+  speed: "780 Mbps"
+  nodes: "420+"
+  latency: "52ms"
+  price: "¥6/月"
   features:
     - 节点众多
     - 解锁全面
@@ -187,6 +202,11 @@
   emoji: 🐊
   description: 速度怪兽，为追求极速体验的用户打造
   website: https://eyujichang.com
+  url: https://eyujichang.com
+  speed: "1050 Mbps"
+  nodes: "290+"
+  latency: "28ms"
+  price: "¥10/月"
   features:
     - 超高速
     - 低延迟
@@ -248,6 +268,11 @@
   emoji: 🌸
   description: 日本优化专家，亚洲连接首选
   website: https://yinghuajichang.com
+  url: https://yinghuajichang.com
+  speed: "890 Mbps"
+  nodes: "180+"
+  latency: "35ms"
+  price: "¥8/月"
   features:
     - 日本节点优化
     - 亚洲加速
@@ -308,6 +333,11 @@
   emoji: 💸
   description: 价格屠夫，不赚钱只为用户服务的良心机场
   website: https://peiqianjichang.com
+  url: https://peiqianjichang.com
+  speed: "750 Mbps"
+  nodes: "320+"
+  latency: "48ms"
+  price: "¥1/月"
   features:
     - 超低价格
     - 不赚钱承诺
@@ -362,6 +392,11 @@
   emoji: 🥭
   description: 云端之选，稳定高效的云计算代理方案
   website: https://muguayun.com
+  url: https://muguayun.com
+  speed: "920 Mbps"
+  nodes: "380+"
+  latency: "42ms"
+  price: "¥7/月"
   features:
     - 云端架构
     - 自动扩展
