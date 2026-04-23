@@ -1,7 +1,7 @@
 ---
 layout: home
-title: 三毛机场
-subtitle: 性价比之王 · 全球加速 · 安全可靠
+title: 三毛机场官网入口-三毛机场Clash节点推荐链接获取
+subtitle: 三毛机场官网入口与订阅链接，整理三毛机场节点使用体验与评测信息，包含Clash节点推荐、小火箭Shadowrocket节点与Clash for Android配置教程，支持多协议节点订阅，适合新手与进阶用户选择稳定高速机场服务
 permalink: /
 stats:
   - value: "850+"
